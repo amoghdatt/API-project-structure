@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+    app:
+        build: .
+        ports:
+            - '5000:5000'
+        volumes:
+            - '.:/cfs'
+        env_file:
+            - ./.env
+        environment:
+            - FLASK_ENV=development
+        command: >
+            flask run --host=0.0.0.0

@@ -1,0 +1,1 @@
+from cfs.resources.cfs import CFS
